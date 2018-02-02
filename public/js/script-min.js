@@ -1,0 +1,1 @@
+"use strict";var my=function e(l){return l};console.log(my("abc"));var menu=document.getElementsByClassName("menu")[0],profile=document.getElementsByClassName("profile")[0];menu.addEventListener("click",function(e){e.preventDefault(),"profile show"==profile.classList.value?profile.classList.value="profile hide":profile.classList.value="profile show"});

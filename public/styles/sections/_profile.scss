@@ -1,0 +1,14 @@
+.profile{
+	width: 100%;
+	height: 35vh;
+	background: $red url("https://upload.wikimedia.org/wikipedia/commons/e/ea/Chaplin_The_Kid_edit.jpg");	
+	background-size: cover;
+	background-position: 0 -140px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+}
+.profile.show{
+	z-index: 20;
+	position: relative;
+}

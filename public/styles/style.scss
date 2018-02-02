@@ -1,0 +1,51 @@
+@media screen { * , *:after,*:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box;	} }* {margin: auto; padding: auto;}
+html { font-size: 62.5%; } /*base sizee*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+body { font-size: 1.4rem; font-family: 'Roboto', sans-serif;} /* =14px all type sizes are relative to the base size*/
+$red: #E54C20;
+$gray: #BCBCBC;
+$black: lighten(black, 10%);
+@mixin b($point) {
+	@if $point == max700 {
+    @media (max-width: 700px) { @content; }
+  }
+  @if $point == 700 {
+    @media (min-width: 700px) { @content; }
+  }
+  @else if $point == 950 {
+    @media (min-width: 950px) { @content; }
+  }
+  @else if $point == 1570 {
+    @media (min-width: 1570px)  { @content; }
+  }
+}
+
+
+
+
+
+
+
+
+
+@import 'sections/_profile';
+@import 'sections/_information';
+@import 'sections/_breadcrumb';
+@import 'sections/_menu';
+@import 'sections/_movies';
+.wrap{
+	@include b(950){
+		display: flex;
+	}
+}
+.information{ order: 1;}
+.profile{ order: 2;}
+.information, .profile{
+  @include b(950) {
+  	width: 50%;
+  	height: 100vh;
+  	overflow: hidden;
+  	position: relative;
+  	background-position: 0 0;
+  }
+}

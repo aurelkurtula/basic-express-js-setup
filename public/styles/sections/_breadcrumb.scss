@@ -1,0 +1,63 @@
+.breadcrumb{
+	border-top: 3px solid black;
+	position: fixed;
+	background: white;
+	bottom: 0;
+	left: 0;
+	z-index: 6;
+	width: 100%;
+	//display: flex;
+	ul{
+		float: right;
+	}
+	li{
+		list-style: none;
+		display: flex;
+		a{
+			text-decoration: none;
+			padding: 30px 30px 15px 30px;
+			display: block;
+			font-weight: bolder;
+			font-size: 1.6rem;
+			color: $red;
+			border-bottom: 15px solid transparent;
+			&:hover{
+				border-bottom: 15px solid $red; 
+			}
+		}
+	}
+	@include b(700){
+		width: 65%;
+	}
+	img{ 
+		display: none;
+	
+	}
+	&__meta{
+		margin-left: 3rem;
+
+		&__title{
+			font-size: 3rem;
+			font-weight: 900;
+			color: $black;
+			display: block;
+		}		
+		&__tag{
+			color: $red;
+			font-weight: 900;
+		}
+	}
+
+	&__navigator{
+		display: flex;
+		margin-right: 0;
+		a{
+			padding: 55px;
+			display: block;
+			float: left;
+			&:hover{
+				background: darken(white, 10%);
+			}
+		}
+	}
+}

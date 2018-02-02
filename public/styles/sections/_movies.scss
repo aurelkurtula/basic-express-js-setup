@@ -1,0 +1,68 @@
+.hide{
+	.movies{
+		display: none;
+	}
+}
+.movies {
+	&:after{
+		content: '';
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: $black;
+		z-index: -1;
+		top:0;
+	}
+	height: 100vh;
+	z-index: 7;
+	padding-top: 40px;
+	article{
+		overflow: auto;
+		margin: 15px auto;
+		display: block;
+		z-index: 13;
+		@include b(max700){
+		  width: 90%;
+		}
+
+		@include b(700){
+		  width: 50%;
+		}
+
+		@include b(950){
+		  width: 80%;
+		}
+
+		@include b(1570){
+		  width: 50%;
+		}		
+		h2{
+			float: left;
+			margin: 45px 20px; 
+		}
+	}
+	&__number{
+		font-size: 6rem;
+		color: $red;
+		font-weight: 900;
+		padding-right: 5px;
+		float: left;
+	}
+	&__side{
+		float: left;
+		margin: 13px auto auto 5px;
+	}
+	&__title{
+		color: $gray;
+		font-size: 1.7rem;
+	}
+	&__year{
+		display: block;
+		color: $red;
+		font-size: 70%;
+	}
+	img{
+		width: 100px;
+		float: left;
+	}
+}

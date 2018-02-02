@@ -1,0 +1,62 @@
+.information{
+	margin-top: 35vh;
+	padding: 40px 0 220px 30px;
+	z-index: 3;
+	position: relative;
+	background: white;
+	@include b(950){
+		margin-top: 0;
+		padding: 70px 0 0 30px;
+	}
+	@include b(1570){
+    padding: 100px 100px 0 100px;
+  }
+	&__heading{
+		font-size: 1.3rem;
+		font-weight: 50;
+		color: $gray;
+		@include b(700) {
+	    font-size: 2rem;
+	  }
+		&__number{
+			font-size: 3rem;
+			color: $red;
+			color: $red;
+			font-weight: 900;
+			@include b(700) {
+		    font-size: 3.5em;
+		  }
+		}
+	}
+	&__name{
+		font-size: 5rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: $black;
+		line-height: 3.5rem;
+		margin: 20px auto 50px auto;
+		@include b(700) {
+	    font-size: 6.7rem;
+		line-height: 4rem;
+	  }
+		small{
+			font-size: 2.5rem;
+			display: block;
+			@include b(700) {
+		    font-size: 3.5rem;
+		  }
+		}
+
+	}
+	&__description{
+		color: $gray;
+		width: 70%;
+		margin: 30px auto auto 55px;
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+		@include b(700) {
+	    font-size: 1.7rem;
+		line-height: 2.5rem;
+	  }
+	}
+}
